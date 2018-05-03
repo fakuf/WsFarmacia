@@ -11,7 +11,7 @@ public class ProductoDAOHibernateJPA<Producto> extends GenericDAOHibernateJPA<Pr
 	public Producto recuperarPorCodigo(String codigo) {
 		try {
 			
-			Query consulta = EMF.getInstance().get().createEntityManager().
+			Query consulta = EMF.getEMF().createEntityManager().
 			createQuery("select p from Producto p where p.codigo = ?");
 			consulta.setParameter(1, codigo);
 			Producto resultado = (Producto)consulta.getSingleResult();

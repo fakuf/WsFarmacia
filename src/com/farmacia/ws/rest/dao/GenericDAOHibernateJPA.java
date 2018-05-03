@@ -10,7 +10,7 @@ public class GenericDAOHibernateJPA<T> implements IGenericDAO<T> {
 	public T recuperar(Serializable id) {
 		try {
 			T entity =
-			EMF.getInstance().get().createEntityManager().find(this.getPersistentClass(), id);
+			EMF.getEMF().createEntityManager().find(this.getPersistentClass(), id);
 			return entity;
 		} catch (Exception e) {
 			throw e;
