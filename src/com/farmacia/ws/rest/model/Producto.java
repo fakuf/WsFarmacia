@@ -14,6 +14,7 @@ public class Producto implements Serializable{
 	
 	private Integer stock;
 	private String nombre;
+	private String codigo;
 	public Integer getStock() {
 		return stock;
 	}
@@ -72,5 +73,15 @@ public class Producto implements Serializable{
 	@Override
 	public String toString() {
 		return "Producto [stock=" + stock + ", nombre=" + nombre + "]";
+	}
+
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 }

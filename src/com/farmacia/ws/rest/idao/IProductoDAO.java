@@ -1,6 +1,8 @@
 package com.farmacia.ws.rest.idao;
 
-public interface IProductoDAO<Producto> extends IGenericDAO<Producto>{
+import com.farmacia.ws.rest.model.Producto;
+
+public interface IProductoDAO extends IGenericDAO<Producto>{
 	/**
 	 * Recupera el producto escaneado a traces del codigo
 	 * @param codigo
